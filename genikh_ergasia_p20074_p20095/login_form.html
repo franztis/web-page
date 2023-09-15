@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title> LOGIN </title>
+<meta charset="UTF-8">
+
+<style type="text/css">
+	.table {
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 10px 20px;
+}
+
+input[type="submit"] {border: 5px solid #9fc7c5; padding: 8px;margin: 0px 20px;background-color: white;padding-left: 12px;padding-right: 12px;}
+
+
+.ul2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: black;
+  font-size: 110%;
+}
+
+.li2 {
+  float: left;
+}
+
+.li2 a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.li2 a:hover {
+  background-color: #111;
+}
+
+
+
+
+</style>
+</head>
+
+
+
+
+<body style="background-color:black;margin:0px;font-family: Arial;">
+<ul class="ul2">
+  <li class="li2"><a  href="arxikh.html">ΑΡΧΙΚΗ ΣΕΛΙΔΑ</a></li>
+ 
+  <li class="li2"><a href="details.html">ΠΛΗΡΟΦΟΡΙΕΣ</a></li>
+  <li class="li2"><a href="topos.html">ΤΟΥΡΙΣΤΙΚΟΣ ΟΔΗΓΟΣ</a></li>
+  <li class="li2"><a href="speakers.html">ΟΜΙΛΗΤΕΣ</a></li>
+   <li class="li2"><a href="before_programme.php">ΠΡΟΓΡΑΜΜΑ</a></li>
+  <li class="li2"><a href="forma.html">REGISTER</a></li>
+  <li class="li2"><a href="login_form.html">LOGIN</a></li>
+   <li class="li2"><a href="logout.php">LOGOUT</a></li>
+</ul>
+<br>
+<h2 class="center"  style="color: white;font-size: 120%;font-weight: bold;margin-left: 100px;font-size: 200%"> <br> &nbsp LOGIN </h2>
+<br><br>
+<form class="form1" method="post" action="login.php" style="letter-spacing:2px;line-height:50px;text-align: center;color: white;">
+<fieldset style="width: 40%;border: 3px solid #9fc7c5;" class="table">
+<table  class="table">
+<tr>
+<label for="username">:</label><td class="right">Username </td><td class="left"><input  pattern="[A-Za-z.]{6,8}" onkeyup="englishsonly(this)" type="username" name="username" size="20"   ></td>
+</tr>
+
+<tr>
+<label for="password">:</label><td class="right">Password</td><td class="left"><input  pattern="[A-Za-z.]{6,8}" onkeyup="englishsonly(this)" type="password" name="password" size="20"   ></td></tr>
+</table>
+
+<p style="background-color:black;text-align: right;margin-right: 165px;">
+
+<input  type="submit"  value="Login" name="login">
+</p>
+</fieldset>
+</form>
+<br>
+<p style="color: white;text-align: center;"> Δεν είστε εγγεγραμένοι;Δημιουργείστε ένα λογαριασμό  <a href="forma.html" style="text-decoration: none;color:#9fc7c5;font-weight: bold;">εδώ</a>.</p>
+ <br><br>
+</body>

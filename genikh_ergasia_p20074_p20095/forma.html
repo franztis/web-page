@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title> Φόρμα Εγγραφής </title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css3a.css" >
+
+<style type="text/css">
+* {font-family:arial;}
+.table {
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 10px 20px;
+ 
+  
+}
+
+p {text-align:right;}
+body {background-color:black;margin:0px;}
+.form1 {letter-spacing:2px;line-height:50px;background-color: #90B4D7;}
+input[type="submit"] {border: 1px solid black; padding: 20px;margin: 0px 20px;}
+input[type="reset"] {border: 1px solid black; padding: 20px;margin: 0px 20px; }
+.right{text-align:right;}
+.left{text-align:left;}
+.form-inline {display: flex;flex-flow: row wrap;align-items: center;}
+
+.form-inline label {margin:5px 10px 5px 3px;}
+</style>
+</head>
+
+<body>
+<h2 class="center"  style="color: white;"> <br> &nbsp Φόρμα Εγγραφής <br><br></h2>
+
+<form class="form1" method="post" action="register.php" >
+
+<table  class="table">
+<tr><td class="right">Όνομα* </td><td class="left"><input onkeyup="greeksonly(this)" type="text" name="name" size="20" placeholder="Εισάγετε το όνομά σας"></td></tr>
+<tr><td class="right">Επώνυμο* </td><td class="left"><input  onkeyup="greeksonly(this)" type="text" name="lname" size="20" placeholder="Εισάγετε το επώνυμό σας"></td></tr>
+<tr><td class="right">Φύλο*</td><td class="left"> <label for="man"> <input id="man" type="radio" name="myradio" value="Mr">Mr
+<label for="woman"><input id="woman" type="radio" name="myradio" value="Mrs">Mrs</td>
+</tr>
+<tr><td class="right">Email*</td> <td class="left"><input type="email"  name="email" size="20" placeholder="Εισάγετε E-mail"></td></tr>
+<tr><td class="right">Τηλέφωνο*</td><td class="left"> <input  type="number" name="number"  size="20"  placeholder="Εισάγετε τηλέφωνο"   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "10"/>
+<tr>
+<label for="username">:</label><td class="right">Username* </td><td class="left"><input  pattern="[A-Za-z.]{6,8}" onkeyup="englishsonly(this)" type="username" name="username" size="20"   ></td></tr>
+<tr>
+<label for="password">:</label><td class="right">Password* </td><td class="left"><input  pattern="[A-Za-z.]{6,8}" onkeyup="englishsonly(this)" type="password" name="password" size="20"   ></td></tr>
+<tr><td class="right">Confirm Password* </td><td class="left"><input type="password" name="confirm_password" size="20"  pattern="[A-Za-z.]{6,8}" onkeyup="englishsonly(this)"></td></tr>
+<tr><td>&nbsp </td><td class="left"><input type="checkbox" name="terms" value="agree">Συμφωνείτε να λαμβάνετε ενημερωτικά email</td></tr>
+</table>
+
+<pre style="font-size: 60%;margin-left: 30px;">Συμπληρώστε όλα τα πεδία με αστερίσκο(*)</pre>
+
+
+<p  style="background-color:black;">
+<br>
+<input class="center" type="submit"  value="Αποστολή" name="apostolh">
+<input class="center" type="reset"  value="Ακύρωση"><br><br></p>
+</form>
+
+
+ <br><br>
+ 
+
+
+<pre>
+ <form action="arxikh.html" class="form-inline" style="float: left;margin-left: 50px;"><input type="submit" value="ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΑΡΧΙΚΗ ΣΕΛΙΔΑ" ></form><form action="topos.html" class="form-inline" style="float: left;"><input type="submit" value="ΜΕΤΑΒΑΣΗ ΣΤΟΝ ΤΟΥΡΙΣΤΙΚΟ ΟΔΗΓΟ" /></form><form action="details.html" class="form-inline" style="float: left;"><input type="submit" value="ΜΕΤΑΒΑΣΗ ΣΤΙΣ ΠΛΗΡΟΦΟΡΙΕΣ" /><form action="taproswpa.html" class="form-inline" style="float: left;"><input type="submit" value="ΟΜΙΛΗΤΕΣ" /></form><form action="before_programme.php" class="form-inline" style="float: left;"><input type="submit" value="ΠΡΟΓΡΑΜMΑ ΟΜΙΛΙΩΝ" /></form></form><form action="login_form.html" class="form-inline" style="float: left;"><input type="submit" value="LOGIN" /></form>
+</pre>
+
+
+<br><br><br><br><br><br>
+<script>
+function  greeksonly(input) {
+var regex = /[^α-ω\a-z\ά-ώ]/gi;
+input.value=input.value.replace(regex,"");
+}
+
+function  englishsonly(input) {
+var regex = /[^a-z]/gi;
+input.value=input.value.replace(regex,"");
+}
+
+</script>
+
+</body>
+
